@@ -1,0 +1,3 @@
+plugin.tx_news.view.twb5.templateRootPath = EXT:kwm2025/Resources/Private/Templates/
+plugin.tx_news.view.twb5.partialRootPath = EXT:kwm2025/Resources/Private/Partials/
+plugin.tx_news.view.twb5.layoutRootPath = EXT:kwm2025/Resources/Private/Layouts//
