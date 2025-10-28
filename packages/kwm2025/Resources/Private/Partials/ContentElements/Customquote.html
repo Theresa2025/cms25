@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="card">
+<blockquote cite="{f:uri.typolink(parameter: data.quote_link)}">
+
+    <f:if condition="{data.quote_source}">
+        <footer><f:link.typolink parameter="{data.quote_link}">{data.quote_source}</f:link.typolink></footer>
+    </f:if>
+    <p>{data.bodytext}</p>
+</blockquote>
+</div>

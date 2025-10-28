@@ -1,0 +1,4 @@
+name: fhooe/kwm2025
+label: 'KWM 2025'
+dependencies:
+  - bootstrap-package/full

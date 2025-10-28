@@ -1,0 +1,38 @@
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+
+page {
+    includeCSS {
+        theme = EXT:kwm2025/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        kwm2025_scripts = EXT:kwm2025/Resources/Public/JavaScript/main.js
+    }
+}
+
+page.config.contentObjectExceptionHandler=0
+
+
+lib.maskContentElement {
+    templateRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
+    }
+    partialRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
+    }
+    layoutRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
+    }
+}

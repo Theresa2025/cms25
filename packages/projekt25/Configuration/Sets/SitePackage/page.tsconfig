@@ -1,0 +1,21 @@
+@import './PageTsConfig/BackendLayouts/'
+
+RTE {
+    default {
+        preset = projekt25
+    }
+}
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+
+    }
+}
+
+TCEMAIN {
+
+}
+

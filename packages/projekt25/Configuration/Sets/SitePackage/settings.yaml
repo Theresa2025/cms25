@@ -1,0 +1,28 @@
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:projekt25/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:projekt25/Resources/Private/Partials/'
+      templateRootPath: 'EXT:projekt25/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:projekt25/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:projekt25/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:projekt25/Resources/Private/Templates/ContentElements/'
+page:
+  logo:
+    file: 'EXT:projekt25/Resources/Public/Images/logo.svg'
+    fileInverted: 'EXT:projekt25/Resources/Public/Images/logo-inverted.svg'
+    width: 192
+    alt: 'My Site Package'
+    linktitle: 'My Site Package'
+  favicon:
+    file: 'EXT:projekt25/Resources/Public/Icons/favicon.ico'
+  fluidtemplate:
+    layoutRootPath: 'EXT:projekt25/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:projekt25/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:projekt25/Resources/Private/Templates/Page/'

@@ -1,0 +1,24 @@
+@import './PageTsConfig/BackendLayouts/'
+
+RTE {
+    default {
+        preset = kwm2025
+    }
+}
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+    layout.addItems.10=----------
+        layout.addItems.11= Custom Quote
+        header_layout.addItems.10= ----------
+        header_layout.addItems.11= Revert Header and Subheader
+    }
+}
+
+TCEMAIN {
+
+}
+
