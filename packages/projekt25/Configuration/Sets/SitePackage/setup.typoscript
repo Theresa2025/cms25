@@ -1,6 +1,11 @@
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+
 page {
     includeCSS {
         theme = EXT:projekt25/Resources/Public/Scss/Theme/theme.scss
+        page.includeCSS.theme = EXT:projekt25/Resources/Public/Css/theme.css
+
+
     }
 
     includeJSLibs {
@@ -19,3 +24,5 @@ page {
         projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/main.js
     }
 }
+
+
