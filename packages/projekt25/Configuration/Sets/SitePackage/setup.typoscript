@@ -1,5 +1,7 @@
 @import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
 
+
+config.contentObjectExceptionHandler=0
 page {
     includeCSS {
         theme = EXT:projekt25/Resources/Public/Scss/Theme/theme.scss

@@ -1,22 +1,41 @@
+<div class="team-member layout-left">
+    <div class="text">
+        <f:if condition="{data.tx_mask_name1}">{data.tx_mask_name1 -> f:format.nl2br()}</f:if>
+        <f:if condition="{data.tx_mask_role1}">{data.tx_mask_role1 -> f:format.nl2br()}</f:if>
+        <f:if condition="{data.tx_mask_description1}">{data.tx_mask_description1 -> f:format.html()}</f:if>
+    </div>
+    <div class="image">
+        <f:for each="{data.tx_mask_bild1}" as="file">
+            <f:media file="{file}" width="200" />
+            {file.description}
+        </f:for>
+    </div>
+</div>
 
-<f:for each="{0:1,1:2,2:3}" as="item">
-    <f:variable name="index" value="{item}" />
+<div class="team-member layout-right">
+    <div class="image">
+        <f:for each="{data.tx_mask_bild2}" as="file">
+            <f:media file="{file}" width="200" />
+            {file.description}
+        </f:for>
+    </div>
+    <div class="text">
+        <f:if condition="{data.tx_mask_name2}">{data.tx_mask_name2 -> f:format.nl2br()}</f:if>
+        <f:if condition="{data.tx_mask_role2}">{data.tx_mask_role2 -> f:format.nl2br()}</f:if>
+        <f:if condition="{data.tx_mask_description2}">{data.tx_mask_description2 -> f:format.html()}</f:if>
+    </div>
+</div>
 
-    <f:variable name="bild" value="{record['bild' -> f:format.number(index)]}" />
-    <f:variable name="name" value="{record['name' -> f:format.number(index)]}" />
-    <f:variable name="role" value="{record['role' -> f:format.number(index)]}" />
-    <f:variable name="description" value="{record['description' -> f:format.number(index)]}" />
-
-    <f:if condition="{name}">
-        <div class="mask-item <f:if condition='{index % 2 == 0}'>reverse</f:if>">
-            <div class="mask-image">
-                <f:media file="{bild}" width="200" />
-            </div>
-            <div class="mask-text">
-                <h3>{name}</h3>
-                <p class="role">{role}</p>
-                <div class="description">{description -> f:format.html()}</div>
-            </div>
-        </div>
-    </f:if>
-</f:for>
+<div class="team-member layout-left">
+    <div class="text">
+        <f:if condition="{data.tx_mask_name3}">{data.tx_mask_name3 -> f:format.nl2br()}</f:if>
+        <f:if condition="{data.tx_mask_role3}">{data.tx_mask_role3 -> f:format.nl2br()}</f:if>
+        <f:if condition="{data.tx_mask_description3}">{data.tx_mask_description3 -> f:format.html()}</f:if>
+    </div>
+    <div class="image">
+        <f:for each="{data.tx_mask_bild3}" as="file">
+            <f:media file="{file}" width="200" />
+            {file.description}
+        </f:for>
+    </div>
+</div>
