@@ -1,41 +1,29 @@
-<div class="team-member layout-left">
-    <div class="text">
-        <f:if condition="{data.tx_mask_name1}">{data.tx_mask_name1 -> f:format.nl2br()}</f:if>
-        <f:if condition="{data.tx_mask_role1}">{data.tx_mask_role1 -> f:format.nl2br()}</f:if>
-        <f:if condition="{data.tx_mask_description1}">{data.tx_mask_description1 -> f:format.html()}</f:if>
-    </div>
-    <div class="image">
-        <f:for each="{data.tx_mask_bild1}" as="file">
-            <f:media file="{file}" width="200" />
-            {file.description}
-        </f:for>
-    </div>
-</div>
+<f:if condition="{data.tx_mask_wiederholung}">
+    <div class="team-list">
+        <f:for each="{data.tx_mask_wiederholung}" as="data_item" iteration="i">
 
-<div class="team-member layout-right">
-    <div class="image">
-        <f:for each="{data.tx_mask_bild2}" as="file">
-            <f:media file="{file}" width="200" />
-            {file.description}
-        </f:for>
-    </div>
-    <div class="text">
-        <f:if condition="{data.tx_mask_name2}">{data.tx_mask_name2 -> f:format.nl2br()}</f:if>
-        <f:if condition="{data.tx_mask_role2}">{data.tx_mask_role2 -> f:format.nl2br()}</f:if>
-        <f:if condition="{data.tx_mask_description2}">{data.tx_mask_description2 -> f:format.html()}</f:if>
-    </div>
-</div>
+            <div class="team-item
+                <f:if condition='{i.isEven}'>team-left</f:if>
+                <f:if condition='{i.isOdd}'>team-right</f:if>
+                <f:if condition='{i.index > 0}'> team-bg</f:if>
+            ">
 
-<div class="team-member layout-left">
-    <div class="text">
-        <f:if condition="{data.tx_mask_name3}">{data.tx_mask_name3 -> f:format.nl2br()}</f:if>
-        <f:if condition="{data.tx_mask_role3}">{data.tx_mask_role3 -> f:format.nl2br()}</f:if>
-        <f:if condition="{data.tx_mask_description3}">{data.tx_mask_description3 -> f:format.html()}</f:if>
-    </div>
-    <div class="image">
-        <f:for each="{data.tx_mask_bild3}" as="file">
-            <f:media file="{file}" width="200" />
-            {file.description}
+                <div class="team-item-image">
+                    <f:for each="{data_item.tx_mask_bild}" as="file">
+                        <f:image image="{file}" width="300" />
+                    </f:for>
+                </div>
+
+                <div class="team-item-content">
+                    <h2 class="team-item-name">{data_item.tx_mask_name}</h2>
+                    <h3 class="team-item-role">{data_item.tx_mask_rolle}</h3>
+                    <div class="team-item-description">
+                        {data_item.tx_mask_beschreibung -> f:format.html()}
+                    </div>
+                </div>
+
+            </div>
+
         </f:for>
     </div>
-</div>
+</f:if>
