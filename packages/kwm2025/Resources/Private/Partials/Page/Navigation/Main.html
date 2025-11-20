@@ -6,7 +6,8 @@
 <header id="page-header" class="{headerClass}">
     <div class="container container-mainnavigation">
        <f:render partial="Header/Logo" arguments="{_all}" />
-        <a class="normal-link"><i class="fas fa-search"></i>Suche</a>
+        <a class="normal-link"><i class="fas fa-search"></i>
+            <f:translate key="LLL:EXT:kwm2025/Resources/Private/Language/locallang.xlf:search"/></a>
         <f:if condition="{mainnavigation}">
             <f:render partial="Header/Toggle" arguments="{_all}" />
             <nav aria-label="{f:translate(key: 'main-navigation.label', extensionName: 'bootstrap_package')}" id="mainnavigation" class="collapse navbar-collapse">

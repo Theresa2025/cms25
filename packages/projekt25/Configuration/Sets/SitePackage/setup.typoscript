@@ -6,7 +6,7 @@ page {
     includeCSS {
         theme = EXT:projekt25/Resources/Public/Scss/Theme/theme.scss
         page.includeCSS.theme = EXT:projekt25/Resources/Public/Css/theme.css
-
+        swiper=https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css
 
     }
 
@@ -23,8 +23,24 @@ page {
     }
 
     includeJSFooter {
-        projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/main.js
+        swiper=https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js
+        projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/Src/main.js
+
     }
 }
+
+
+lib.maskContentElement {
+    templateRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
+    }
+    partialRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
+    }
+    layoutRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
+    }
+}
+
 
 
