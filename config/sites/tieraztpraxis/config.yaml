@@ -1,0 +1,28 @@
+base: 'http://tierarztpraxis.s2410456015.student.kwmhgb.at/'
+dependencies:
+  - fhooe/projekt25
+languages:
+  -
+    title: German
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_DE
+    navigationTitle: Deutsch
+    flag: at
+    hreflang: de_DE
+    websiteTitle: ''
+  -
+    title: English
+    enabled: true
+    locale: en_US
+    hreflang: ''
+    base: /en/
+    websiteTitle: ''
+    navigationTitle: English
+    fallbackType: strict
+    fallbacks: ''
+    flag: en-us-gb
+    languageId: 2
+rootPageId: 18
+websiteTitle: Tieraztpraxis
