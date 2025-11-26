@@ -45,5 +45,8 @@ lib.maskContentElement {
     }
 }
 
+plugin.tx_form.settings.yamlConfiguration.100=EXT:projekt25/Configuration/Form/Setup.yaml
+module.tx_form.settings.yamlConfiguration.100=EXT:projekt25/Configuration/Form/Setup.yaml
+
 
 
