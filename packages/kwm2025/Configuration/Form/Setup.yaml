@@ -1,0 +1,17 @@
+
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          120: EXT:kwm2025/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateVariant: version2
+                templateRootPaths:
+                  30: 'EXT:kwm2025/Resources/Private/Templates/Form/'

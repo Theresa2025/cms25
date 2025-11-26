@@ -44,3 +44,16 @@ lib.maskContentElement {
         5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
     }
 }
+
+
+lib.record=RECORDS
+lib.record{
+    source.data=current:1
+    source.intval= 1
+    tables= tt_content
+}
+
+
+//für Formular pfad, funktioniert aber nicht
+plugin.tx_form.settings.yamlConfigurations.100=EXT:kwm2025/Configuration/Form/Setup.yaml
+module.tx_form.settings.yamlConfigurations.100=EXT:kwm2025/Configuration/Form/Setup.yaml

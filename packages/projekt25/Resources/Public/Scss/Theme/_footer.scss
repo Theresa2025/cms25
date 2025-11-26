@@ -1,0 +1,65 @@
+/*Footer*/
+.footer-section-meta {
+  background: #e8f3ec; // helle grünliche Footerfarbe
+  padding: 40px 0;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-logo-img {
+  width: 140px;
+  height: auto;
+}
+
+.footer-column h3 {
+  color: #0f7a75;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-hours table td {
+  padding: 2px 10px 2px 0;
+  font-size: 14px;
+}
+
+.footer-contact .contact-icon {
+  color: #0f7a75;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+
+.footer-section{
+  background-color: #c9ead3 !important;
+
+}
+
+.footer-legal {
+  list-style: none;     /* Keine Bullet Points */
+  padding: 0;
+  margin: 40px auto 0;  /* Abstand nach oben + zentriert */
+  text-align: center;   /* Text mittig */
+  width: 100%;          /* Über gesamte Footerbreite */
+  grid-column: 1 / -1;
+}
+
+.footer-legal li {
+  display: inline-block; /* Links nebeneinander */
+  margin: 0 15px;        /* Abstand zwischen den Links */
+}
+
+.footer-legal a {
+  text-decoration: none; /* Standard-Stil behalten */
+}
+
+.footer-legal a:hover {
+  text-decoration: underline; /* optionaler Hover */
+}
+

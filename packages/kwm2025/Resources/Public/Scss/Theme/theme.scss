@@ -1,0 +1,59 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03rem;
+
+}
+h2 {
+  font-size: calc(1.325rem + 1.9vw)!important;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-default h2 {
+  color: #000000;
+  text-align: left;
+}
+
+.element-subheader {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.692rem;
+  color: #789C2E;
+  line-height: 2.75rem;
+  margin-bottom: 2rem;
+  padding-left: 1.6rem;
+  text-align: center;
+}
+
+.section-default .element-subheader {
+  text-align: left;
+}
+
+p  {
+  text-align: center!important;
+}
+
+.section-default p {
+  text-align: left!important;
+}
+
+#page-header{
+  background-color: #0dcaf0 !important;
+}
+
+@import "food";
+@import "main_cards";
+
+

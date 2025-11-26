@@ -1,0 +1,179 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: kWMContactForm
+label: KWMContactForm
+prototypeName: standard
+finishers:
+  -
+    options:
+      message: 'Danke für Ihre Nachricht!'
+      contentElementUid: ''
+    identifier: Confirmation
+  -
+    options:
+      subject: 'Danke für Ihre Nachricht'
+      recipients:
+        '{email-1}': '{text-2}'
+      senderAddress: s2410456015@fhooe.at
+      senderName: KWM
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+      translation:
+        language: ''
+    identifier: EmailToSender
+    defaultValue: '{email-1}'
+  -
+    options:
+      subject: 'Nachricht von der Webseite'
+      recipients:
+        s2410456015@fhooe.at: KWM
+      senderAddress: '{email-1}'
+      senderName: '{text-2}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: ''
+      title: ''
+    identifier: EmailToReceiver
+    defaultValue: ''
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Kontaktdaten
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Vorname
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            minlength: '3'
+            maxlength: '100'
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte einen Vornamen angeben'
+            -
+              code: 1221560718
+              message: 'Bitte einen Vornamen angeben'
+            -
+              code: 1347992400
+              message: 'Bitte einen Vornamen angeben'
+            -
+              code: 1347992453
+              message: 'Bitte einen Vornamen angeben'
+            -
+              code: 1238110957
+              message: 'Vorname muss mind- 3- max. 100 Zeichen haben'
+            -
+              code: 1269883975
+              message: 'Vorname muss mind- 3- max. 100 Zeichen haben'
+            -
+              code: 1428504122
+              message: 'Vorname muss mind- 3- max. 100 Zeichen haben'
+            -
+              code: 1238108068
+              message: 'Vorname muss mind- 3- max. 100 Zeichen haben'
+            -
+              code: 1238108069
+              message: 'Vorname muss mind- 3- max. 100 Zeichen haben'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              minimum: '3'
+              maximum: '100'
+            identifier: StringLength
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Nachname
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte einen Nachnamen eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte einen Nachnamen eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte einen Nachnamen eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte einen Nachnamen eingeben'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: 'Email address'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-2
+    label: Step
+    renderables:
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Kommentar
+        properties:
+          fluidAdditionalAttributes:
+            minlength: '5'
+            maxlength: '1000'
+          validationErrorMessages:
+            -
+              code: 1238110957
+              message: 'Mind. 5 Zeichen'
+            -
+              code: 1269883975
+              message: 'Mind. 5 Zeichen'
+            -
+              code: 1428504122
+              message: 'Mind. 5 Zeichen'
+            -
+              code: 1238108068
+              message: 'Mind. 5 Zeichen'
+            -
+              code: 1238108069
+              message: 'Mind. 5 Zeichen'
+        validators:
+          -
+            options:
+              minimum: '5'
+              maximum: '1000'
+            identifier: StringLength
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

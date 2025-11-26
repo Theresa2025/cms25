@@ -1,4 +1,6 @@
 @import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
 
 
 config.contentObjectExceptionHandler=0
@@ -6,7 +8,6 @@ page {
     includeCSS {
         theme = EXT:projekt25/Resources/Public/Scss/Theme/theme.scss
         page.includeCSS.theme = EXT:projekt25/Resources/Public/Css/theme.css
-        swiper=https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css
         googleFonts = https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap
         googleFonts.external = 1
 
@@ -22,11 +23,10 @@ page {
     }
 
     includeJSFooterlibs {
-
     }
 
     includeJSFooter {
-        swiper=https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js
+
         projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/Src/main.js
 
     }

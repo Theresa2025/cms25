@@ -1,0 +1,86 @@
+//
+// Variables
+//
+@import "variables";
+@import "team";
+@import "buttons";
+@import "card";
+@import "footer";
+@import "header";
+@import "bilder";
+
+
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+
+
+.contentcontainer-column{
+  background-color:#C9EAD3 !important;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+body{
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #F5F6F7;
+  color: #333333;
+
+}
+h1{
+  color: #0f7a75;
+  font-weight: 700 ;
+  font-family: 'Merriweather', serif;
+
+}
+
+h2{
+  color: #333333;
+  font-family: 'Merriweather', serif;
+
+}
+
+h3{
+  color: #333333;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+
+
+
+/* Tabellen */
+
+.table {
+  --bs-table-color: #333333;
+  --bs-table-bg: transparent;
+  --bs-table-border-color: transparent;
+  border: none !important;
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* Alle Linien innerhalb der Tabelle entfernen */
+.table td,
+.table th {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+
+
+
+
+
+
+

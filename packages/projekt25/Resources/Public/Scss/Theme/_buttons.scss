@@ -1,0 +1,12 @@
+/*Button*/
+.btn{
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+.btn-primary{
+  --bs-btn-color: white !important;
+  --bs-btn-hover-bg: draker;
+
+}

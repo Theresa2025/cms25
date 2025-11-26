@@ -1,0 +1,65 @@
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: #C9EAD3;
+
+}
+
+.team-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 60px 40px;
+  border-radius: 20px;
+}
+
+
+/* Bild links */
+.team-left .team-item-image {
+  order: 1;
+}
+.team-left .team-item-content {
+  order: 2;
+  padding-left: 20px;
+}
+
+/* Bild rechts */
+.team-right .team-item-image {
+  order: 2;
+}
+.team-right .team-item-content {
+  order: 1;
+  padding-right: 20px;
+}
+
+.team-item-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.team-item-name {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #0f7a75;
+}
+
+.team-item-role {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.team-item-description {
+  line-height: 1.6;
+  color: #333;
+
+}
+
+
+img[src*="csm_Team_8d7fe4aa30"]{
+  border-radius: 20px ;
+}
+
+

@@ -1,0 +1,35 @@
+//styles for Lebensweg
+h2 {
+  font-size: calc(1.325rem + 1.9vw);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../Fonts/kaushan.woff2) format("woff2");
+}
+
+.element-subheader {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.692rem;
+  color: #789C2E;
+  line-height: 2.75rem;
+  margin-bottom: 2rem;
+  padding-left: 1.6rem;
+}
+
+.btn {
+  letter-spacing: 0.17rem;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #198754;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-border-color: #198754;
+}

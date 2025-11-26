@@ -1,0 +1,18 @@
+.card-group-element-item {
+  position: relative;
+
+  .card-img-top {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 50px; // oder kleiner
+    height: auto;
+    z-index: 2;
+    border-radius: 6px; // optional
+  }
+
+  .card {
+    padding-top: 100px; // Platz schaffen, damit Bild nicht überlappt
+    background-color: #C9EAD3 !important;
+  }
+}
