@@ -1,13 +1,11 @@
 <f:if condition="{data.tx_mask_wiederholung}">
     <div class="team-list">
         <f:for each="{data.tx_mask_wiederholung}" as="data_item" iteration="i">
-
             <div class="team-item
                 <f:if condition='{i.isEven}'>team-left</f:if>
                 <f:if condition='{i.isOdd}'>team-right</f:if>
                 <f:if condition='{i.index > 0}'> team-bg</f:if>
             ">
-
                 <div class="team-item-image">
                     <f:for each="{data_item.tx_mask_bild}" as="file">
                         <f:image image="{file}" width="300" />
@@ -20,10 +18,34 @@
                     <div class="team-item-description">
                         {data_item.tx_mask_beschreibung -> f:format.html()}
                     </div>
+
+                    <!-- Plus/Minus Button -->
+                    <button class="toggle-info-btn">+</button>
+
+                    <!-- Zusatzinformationen (zuerst versteckt) -->
+                    <div class="team-item-extra-info" style="display:none;">
+                        {data_item.tx_mask_zusatzinfo -> f:format.html()}
+                    </div>
                 </div>
-
             </div>
-
         </f:for>
     </div>
 </f:if>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.toggle-info-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const extraInfo = this.nextElementSibling;
+                if (extraInfo.style.display === 'none') {
+                    extraInfo.style.display = 'block';
+                    this.textContent = '−'; // Minus anzeigen
+                } else {
+                    extraInfo.style.display = 'none';
+                    this.textContent = '+'; // Plus zurück
+                }
+            });
+        });
+    });
+</script>
