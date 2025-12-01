@@ -1,19 +1,32 @@
-.card-group-element-item {
-  position: relative;
-
-  .card-img-top {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 50px; // oder kleiner
-    height: auto;
-    z-index: 2;
-    border-radius: 6px; // optional
-  }
-
-  .card {
-    padding-top: 100px; // Platz schaffen, damit Bild nicht überlappt
-    background-color: #C9EAD3 !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  margin-bottom: 1.5rem;
 }
+
+.card-icon-wrapper img {
+    max-height: 60px;   /* oder 55px, 50px – je nach gewünschter Größe */
+    width: auto;
+    height: auto;
+}
+
+.card-group-element-item {
+  background-color: #C9EAD3;   // <-- dein Grün
+  border-radius: 25px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card-group-element-item .card {
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+
+
+
+
+

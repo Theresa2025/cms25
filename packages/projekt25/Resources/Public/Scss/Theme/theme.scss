@@ -6,6 +6,7 @@
 @import "buttons";
 @import "card";
 @import "tabelle";
+@import "columns";
 @import "footer";
 @import "header";
 @import "bilder";
@@ -16,16 +17,6 @@
 // Import needed Bootstrap Package Files
 //
 @import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
-
-
-
-.contentcontainer-column{
-  background-color:#C9EAD3 !important;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-
 
 
 
@@ -77,11 +68,5 @@ h3{
   border: none !important;
   background-color: transparent !important;
 }
-
-
-
-
-
-
 
 

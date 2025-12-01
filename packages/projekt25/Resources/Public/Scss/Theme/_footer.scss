@@ -1,6 +1,9 @@
-/*Footer*/
+/* ================================
+   FOOTER GRUNDLAYOUT
+================================ */
+
 .footer-section-meta {
-  background: #e8f3ec; // helle grünliche Footerfarbe
+  background: #c9ead3 !important; // Ein einheitliches, sanftes Grün
   padding: 40px 0;
 }
 
@@ -8,15 +11,27 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
   align-items: start;
+  padding-left: 40px;
+
+  // Desktop: 4 Spalten
+  grid-template-columns: repeat(4, 1fr);
 }
+
+/* ================================
+   LOGO
+================================ */
 
 .footer-logo-img {
   width: 140px;
   height: auto;
+  display: block;
 }
+
+/* ================================
+   SPALTEN / TITEL
+================================ */
 
 .footer-column h3 {
   color: #0f7a75;
@@ -35,31 +50,73 @@
   font-size: 18px;
 }
 
-
-.footer-section{
-  background-color: #c9ead3 !important;
-
-}
+/* ================================
+   LEGAL LINKS
+================================ */
 
 .footer-legal {
-  list-style: none;     /* Keine Bullet Points */
+  list-style: none;
   padding: 0;
-  margin: 40px auto 0;  /* Abstand nach oben + zentriert */
-  text-align: center;   /* Text mittig */
-  width: 100%;          /* Über gesamte Footerbreite */
+  margin: 40px auto 0;
+  text-align: center;
+  width: 100%;
   grid-column: 1 / -1;
 }
 
 .footer-legal li {
-  display: inline-block; /* Links nebeneinander */
-  margin: 0 15px;        /* Abstand zwischen den Links */
+  display: inline-block;
+  margin: 0 15px;
 }
 
 .footer-legal a {
-  text-decoration: none; /* Standard-Stil behalten */
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-legal a:hover {
-  text-decoration: underline; /* optionaler Hover */
+  text-decoration: underline;
 }
 
+/* ================================
+   RESPONSIVE: TABLET
+================================ */
+
+@media (max-width: 992px) {
+  .footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-legal {
+    margin-top: 20px;
+  }
+}
+
+/* ================================
+   RESPONSIVE: HANDY
+================================ */
+
+@media (max-width: 600px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-column,
+  .footer-logo,
+  .footer-contact,
+  .footer-hours,
+  .footer-address {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer-logo-img {
+    margin: 0 auto;
+  }
+
+  .footer-legal li {
+    margin: 0 8px;
+  }
+}

@@ -20,7 +20,8 @@
                     </div>
 
                     <!-- Plus/Minus Button -->
-                    <button class="toggle-info-btn">+</button>
+                    <button class="toggle-info-btn team-toggle-btn">+</button>
+
 
                     <!-- Zusatzinformationen (zuerst versteckt) -->
                     <div class="team-item-extra-info" style="display:none;">
@@ -32,20 +33,4 @@
     </div>
 </f:if>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.toggle-info-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const extraInfo = this.nextElementSibling;
-                if (extraInfo.style.display === 'none') {
-                    extraInfo.style.display = 'block';
-                    this.textContent = '−'; // Minus anzeigen
-                } else {
-                    extraInfo.style.display = 'none';
-                    this.textContent = '+'; // Plus zurück
-                }
-            });
-        });
-    });
-</script>
+

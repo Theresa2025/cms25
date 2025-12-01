@@ -10,27 +10,23 @@ page {
         page.includeCSS.theme = EXT:projekt25/Resources/Public/Css/theme.css
         googleFonts = https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap
         googleFonts.external = 1
-
-        }
     }
 
     includeJSLibs {
-
     }
 
     includeJS {
-
     }
 
     includeJSFooterlibs {
     }
 
     includeJSFooter {
-
-        projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/Src/main.js
-
+        projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/main.js
     }
 }
+
+
 
 
 lib.maskContentElement {
