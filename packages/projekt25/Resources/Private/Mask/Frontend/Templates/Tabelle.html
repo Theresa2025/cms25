@@ -1,13 +1,20 @@
-<table class="tabelle">
-
-
-    <tbody>
-    <f:for each="{data.tx_mask_rows}" as="row">
-        <tr>
-            <td>{row.tx_mask_wochentag}</td>
-            <td>{row.tx_mask_vmuhrzeit}</td>
-            <td>{row.tx_mask_nmuhrzeit}</td>
-        </tr>
-    </f:for>
-    </tbody>
-</table>
+<f:if condition="{data.tx_mask_ueberschrift}">
+    {data.tx_mask_ueberschrift}
+</f:if>
+<f:if condition="{data.tx_mask_rows}">
+    <ul>
+        <f:for each="{data.tx_mask_rows}" as="data_item">
+            <li>
+                <f:if condition="{data_item.tx_mask_wochentag}">
+                    {data_item.tx_mask_wochentag}
+                </f:if>
+                <f:if condition="{data_item.tx_mask_vmuhrzeit}">
+                    {data_item.tx_mask_vmuhrzeit}
+                </f:if>
+                <f:if condition="{data_item.tx_mask_nmuhrzeit}">
+                    {data_item.tx_mask_nmuhrzeit}
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:if>

@@ -11,8 +11,7 @@ page {
         googleFonts = https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap
         googleFonts.external = 1
 
-        # FullCalendar CSS
-        fullcalendar = https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css
+
     }
 
     includeJSLibs {
@@ -22,7 +21,6 @@ page {
     }
 
     includeJSFooterlibs {
-        fullcalendar = https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js
     }
 
     includeJSFooter {
