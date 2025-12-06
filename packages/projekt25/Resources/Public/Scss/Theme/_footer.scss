@@ -69,13 +69,17 @@
 }
 
 .footer-legal a {
-  text-decoration: none;
-  color: inherit;
+  color: #000;                /* Schwarz */
+  text-decoration: underline; /* Unterstrichen */
+  transition: color 0.2s ease;
 }
 
 .footer-legal a:hover {
-  text-decoration: underline;
+  color: #0F7A75;             /* Petrol – wie deine anderen Links */
+  text-decoration: underline; /* bleibt unterstrichen */
 }
+
+
 
 
 
@@ -173,3 +177,6 @@
     margin: 0 8px;
   }
 }
+
+
+

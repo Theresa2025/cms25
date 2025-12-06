@@ -18,4 +18,46 @@ img[src*="csm_Hund_8203c45cc9"]{
 
 
 
+/*Logo*/
+/* Logo leicht nach unten verschieben */
+/* Bild vergrößern */
+.navbar-brand img {
+  height: 100px !important;
+  width: auto !important;
+  max-height: none !important;
+}
+
+
+/* Eltern-Container vergrößern */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 100px !important;     /* MUSS größer sein als das Bild */
+}
+
+
+
+/* Einheitliche Größe für alle Social- und Login-Icons */
+.header-icons a img,
+.header-icons a svg {
+  width: 28px;          /* gewünschte Größe */
+  height: 28px;
+  object-fit: contain;  /* verhindert Verzerrung */
+  display: block;
+}
+
+.header-icons img[src*="LoginIcon"] {
+  width: 40px;   // gewünschte Größe
+  height: auto;
+}
+
+.header-icons img[src*="Instagram"] {
+  width: 32px;   // gewünschte Größe
+  height: auto;
+}
+
+
+
+
+
 
