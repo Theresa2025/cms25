@@ -79,6 +79,53 @@
 
 
 
+/* Footer Öffnungszeiten – Wrapper */
+.footer-hours .oeffnungszeiten-wrapper {
+  margin: 0;
+}
+
+/* Titel */
+.footer-hours .oeffnungszeiten-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #0F7A75;
+}
+
+/* Tabelle kompakt und klar */
+.footer-hours .oeffnungszeiten-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Zeilen: enger */
+.footer-hours .oeffnungszeiten-table td {
+  padding: 2px 0;
+  color: #2d2d2d;
+}
+
+/* Spalte 1: Wochentag */
+.footer-hours .oeffnungszeiten-table .day {
+  width: 32%;
+  white-space: nowrap;
+  font-weight: 500;
+  padding-right: 20px;
+}
+
+/* Spalte 2 & 3: Uhrzeiten – perfekt nebeneinander */
+.footer-hours .oeffnungszeiten-table .time {
+  width: 28%;
+  white-space: nowrap;   /* nie umbrechen */
+  text-align: left;
+  padding-right: 20px;
+}
+
+/* Footer-Schriftgröße */
+.footer-hours {
+  font-size: 15px;
+}
+
 
 
 

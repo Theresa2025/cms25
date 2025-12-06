@@ -1,0 +1,31 @@
+.oeffnungszeiten-wrapper {
+  margin-bottom: 20px;
+}
+
+.oeffnungszeiten-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #0F7A75; /* deine Petrol-Farbe */
+}
+
+.oeffnungszeiten-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.oeffnungszeiten-table td {
+  padding: 4px 0;
+  vertical-align: top;
+}
+
+/* Spaltenbreiten wie im Screenshot */
+.oeffnungszeiten-table .day {
+  width: 30%;
+  font-weight: 500;
+}
+
+.oeffnungszeiten-table .time {
+  width: 35%;
+  text-align: left;
+}
