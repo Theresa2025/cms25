@@ -10,7 +10,8 @@ page {
         page.includeCSS.theme = EXT:projekt25/Resources/Public/Css/theme.css
         googleFonts = https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap
         googleFonts.external = 1
-
+        fullcalendar = https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css
+        fullcalendar.external = 1
 
     }
 
@@ -21,18 +22,23 @@ page {
     }
 
     includeJSFooterlibs {
+
     }
 
     includeJSFooter {
+        fullcalendar = https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js
+        fullcalendar.external = 1
+
         projekt25_scripts = EXT:projekt25/Resources/Public/JavaScript/main.js
     }
 }
 
-lib.record=RECORDS
-lib.record{
-    source.data=current:1
-    source.intval= 1
-    tables= tt_content
+lib.tableRecord=RECORDS
+lib.tableRecord = RECORDS
+lib.tableRecord {
+    source.data = current:1
+    source.intval = 1
+    tables = tt_content
 }
 
 

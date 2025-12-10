@@ -1,0 +1,19 @@
+.kalender-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-bottom: 50px; /* Abstand nach unten */
+}
+
+
+/* Handy-Version */
+@media (max-width: 600px) {
+  .fc-toolbar.fc-header-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fc {
+    font-size: 12px;
+  }
+}

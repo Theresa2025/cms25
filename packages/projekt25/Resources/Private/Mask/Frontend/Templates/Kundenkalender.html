@@ -1,0 +1,82 @@
+<!-- optionales Feld -->
+{data.tx_mask_text -> f:format.nl2br()}
+
+<!-- Kalender Wrapper für Responsive Layout -->
+<div class="kalender-wrapper">
+    <div id="kundenkalender-{data.uid}"
+         class="kundenkalender"
+         data-uid="{data.uid}">
+    </div>
+</div>
+
+<!-- Modal Fenster -->
+<div class="modal fade"
+     id="terminModal-{data.uid}"
+     tabindex="-1"
+     aria-labelledby="terminModalLabel-{data.uid}"
+     aria-hidden="true">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Termin buchen</h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="terminForm-{data.uid}">
+
+                    <div class="mb-3">
+                        <label>Datum</label>
+                        <input type="text" id="terminDatum-{data.uid}"
+                               class="form-control" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Uhrzeit</label>
+                        <input type="time" id="terminZeit-{data.uid}"
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" id="terminName-{data.uid}"
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Telefonnummer</label>
+                        <input type="tel" id="terminTelefon-{data.uid}" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Leistung</label>
+                        <select class="form-control" id="terminLeistung-{data.uid}" required>
+                            <option value="">Bitte wählen…</option>
+                            <option>Impfung</option>
+                            <option>Routinecheck</option>
+                            <option>Operation Nachkontrolle</option>
+                            <option>Erstgespräch</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Kommentar</label>
+                        <textarea id="terminKommentar-{data.uid}"
+                                  class="form-control"
+                                  rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Senden
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

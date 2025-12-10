@@ -9,6 +9,7 @@
 @import "columns";
 @import "footer";
 @import "header";
+@import "kalender";
 @import "bilder";
 
 
@@ -51,22 +52,6 @@ h3{
 
 
 
-/* Tabellen */
 
-.table {
-  --bs-table-color: #333333;
-  --bs-table-bg: transparent;
-  --bs-table-border-color: transparent;
-  border: none !important;
-  background-color: transparent !important;
-  color: inherit !important;
-}
-
-/* Alle Linien innerhalb der Tabelle entfernen */
-.table td,
-.table th {
-  border: none !important;
-  background-color: transparent !important;
-}
 
 
