@@ -1,6 +1,7 @@
 @import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:news/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
+@import 'EXT:femanager/Configuration/TypoScript/setup.typoscript'
 
 
 config.contentObjectExceptionHandler=0
@@ -59,6 +60,19 @@ lib.maskContentElement {
 
 plugin.tx_form.settings.yamlConfigurations.100=EXT:projekt25/Configuration/Form/Setup.yaml
 module.tx_form.settings.yamlConfigurations.100=EXT:projekt25/Configuration/Form/Setup.yaml
+
+
+
+plugin.tx_femanager {
+    settings {
+        new {
+            pid = 59
+        }
+        edit {
+            pid = 59
+        }
+    }
+}
 
 
 
