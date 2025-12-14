@@ -58,22 +58,14 @@
 }
 
 
-/* --- Button / Link --- */
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column a {
-  display: inline-block;
-  background: #ff7a59;
-  color: #fff !important;
+/* --- Button im 3-Spalten-Bereich (wie Standard-Button) --- */
+.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column .btn {
+  margin-top: 20px;
+  font-size: 18px;
   padding: 12px 35px;
   border-radius: 999px;
-  font-size: 18px;
-  text-decoration: none;
-  margin-top: 20px;
-  transition: background 0.25s ease;
 }
 
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column a:hover {
-  background: #ff6440;
-}
 
 
 /* ==========================================================

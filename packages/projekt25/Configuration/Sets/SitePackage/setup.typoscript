@@ -65,6 +65,7 @@ module.tx_form.settings.yamlConfigurations.100=EXT:projekt25/Configuration/Form/
 
 plugin.tx_femanager {
     settings {
+        storagePid = 59
         new {
             pid = 59
         }
@@ -72,7 +73,20 @@ plugin.tx_femanager {
             pid = 59
         }
     }
+
+    persistence {
+        storagePid = 59
+    }
+    settings {
+        new {
+            redirectPid = 68
+        }
+    }
+
 }
+
+
+
 
 
 

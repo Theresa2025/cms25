@@ -1,19 +1,32 @@
+/* ================================
+   CARD HEADER
+================================ */
+
 .card-header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 80px;
   margin-bottom: 1.5rem;
+  gap: 1rem; // Abstand bei Umbruch
 }
+
+/* ================================
+   ICON
+================================ */
 
 .card-icon-wrapper img {
-    max-height: 60px;   /* oder 55px, 50px – je nach gewünschter Größe */
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
+  max-height: 60px; // Desktop Standard
 }
 
+/* ================================
+   CARD CONTAINER
+================================ */
+
 .card-group-element-item {
-  background-color: #C9EAD3;   // <-- dein Grün
+  background-color: #C9EAD3;
   border-radius: 25px;
   padding: 2.5rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -25,8 +38,47 @@
   box-shadow: none;
 }
 
+/* ================================
+   TABLET (≤ 992px)
+================================ */
 
+@media (max-width: 992px) {
+  .card-group-element-item {
+    padding: 2rem;
+  }
 
+  .card-icon-wrapper img {
+    max-height: 50px;
+  }
+}
 
+/* ================================
+   MOBILE (≤ 768px)
+================================ */
 
+@media (max-width: 768px) {
+  .card-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+  }
 
+  .card-icon-wrapper img {
+    max-height: 42px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE (≤ 480px)
+================================ */
+
+@media (max-width: 480px) {
+  .card-group-element-item {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .card-icon-wrapper img {
+    max-height: 36px;
+  }
+}
