@@ -14,6 +14,10 @@
   border-radius: 20px;
 }
 
+.team-item-image {
+  display: flex;
+  justify-content: center; /* Bild zentrieren */
+}
 
 /* Bild links */
 .team-left .team-item-image {
@@ -35,6 +39,7 @@
 
 .team-item-image img {
   width: 100%;
+  max-width: 420px;   /* ← Bildgröße steuern */
   height: auto;
   border-radius: 20px;
 }

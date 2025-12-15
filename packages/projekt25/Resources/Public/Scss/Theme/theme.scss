@@ -12,16 +12,10 @@
 @import "kalender";
 @import "bilder";
 
-
-
 //
 // Import needed Bootstrap Package Files
 //
 @import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
-
-
-
-
 
 body{
   font-family: 'Inter', sans-serif;
@@ -104,9 +98,53 @@ h3{
 }
 
 
+/* ===============================
+   LANGUAGE SWITCHER (HEADER)
+================================ */
 
+/* Grundlayout */
+.language-menu {
+  list-style: none;
+  margin: 0;
+  margin-left: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 1;
+}
 
+/* Listenelemente */
+.language-menu li {
+  display: flex;
+  align-items: center;
+}
 
+/* Trennstrich DE | EN */
+.language-menu li:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px;
+  color: #000;
+  opacity: 0.6;
+}
 
+/* Links */
+.language-menu a {
+  color: #ff5a3c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
 
+/* Hover */
+.language-menu a:hover {
+  text-decoration: underline;
+}
 
+/* aktive Sprache */
+.language-menu li.active a {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: default;
+  pointer-events: none; /* verhindert Klick auf aktive Sprache */
+}

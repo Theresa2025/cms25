@@ -1,9 +1,6 @@
-/* ==========================================================
-   3-SPALTEN NOTDIENST-BEREICH
-   Wird nur angewendet, wenn data-container-identifier="container_3_columns"
-   ========================================================== */
+/*NOTDIENST-BEREICH */
 
-/* --- Hauptcontainer (3 Spalten) --- */
+/* --- Hauptcontainer --- */
 .contentcontainer[data-container-identifier="container_3_columns"] {
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +11,7 @@
   padding: 0 20px;
 }
 
-/* --- EINZELNE SPALTEN (jede Box) --- */
+/* --- EINZELNE SPALTEN --- */
 .contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column {
   background: #c9ead3;
   border-radius: 25px;
@@ -32,7 +29,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover: leichtes Anheben */
+/* Hover/
 .contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.20);
@@ -58,7 +55,7 @@
 }
 
 
-/* --- Button im 3-Spalten-Bereich (wie Standard-Button) --- */
+/* --- Button  --- */
 .contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column .btn {
   margin-top: 20px;
   font-size: 18px;
@@ -68,9 +65,7 @@
 
 
 
-/* ==========================================================
-   RESPONSIVE ANPASSUNGEN
-   ========================================================== */
+/* RESPONSIVE ANPASSUNGEN */
 
 /* Tablet – 2 Spalten */
 @media (max-width: 900px) {
