@@ -1,82 +1,94 @@
-/*NOTDIENST-BEREICH */
+/* ==========================================================
+   NOTDIENST-BEREICH – ZIERLICHE VARIANTE
+   ========================================================== */
 
 /* --- Hauptcontainer --- */
 .contentcontainer[data-container-identifier="container_3_columns"] {
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 30px;                 /* etwas weniger Abstand */
   justify-content: center;
-  max-width: 1300px;
-  margin: 50px auto;
+  max-width: 1150px;         /* Container schmaler */
+  margin: 40px auto;
   padding: 0 20px;
 }
 
 /* --- EINZELNE SPALTEN --- */
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column {
+.contentcontainer[data-container-identifier="container_3_columns"]
+.contentcontainer-column {
   background: #c9ead3;
-  border-radius: 25px;
-  padding: 40px 30px;
-  width: calc(33.333% - 35px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 22px;       /* etwas feiner */
+  padding: 30px 24px;        /* weniger Innenabstand */
+  width: calc(33.333% - 30px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
 
   box-sizing: border-box;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover/
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.20);
+/* Hover */
+.contentcontainer[data-container-identifier="container_3_columns"]
+.contentcontainer-column:hover {
+  transform: translateY(-4px);   /* weniger Bewegung */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
-
-/* --- Bilder in den Kacheln --- */
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column img {
+/* --- Bilder --- */
+.contentcontainer[data-container-identifier="container_3_columns"]
+.contentcontainer-column img {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* Bilder abgerundet */
+  border-radius: 18px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-
-/* --- Titel (H2 / H3) --- */
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column h2,
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column h3 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #083b2b; /* dunkles Praxisgrün */
+/* --- Titel --- */
+.contentcontainer[data-container-identifier="container_3_columns"]
+.contentcontainer-column h2,
+.contentcontainer[data-container-identifier="container_3_columns"]
+.contentcontainer-column h3 {
+  font-size: 22px;           /* kleiner & eleganter */
+  margin-bottom: 16px;
+  color: #083b2b;
+  line-height: 1.25;
 }
 
-
-/* --- Button  --- */
-.contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column .btn {
-  margin-top: 20px;
-  font-size: 18px;
-  padding: 12px 35px;
+/* --- Button --- */
+.contentcontainer[data-container-identifier="container_3_columns"]
+.contentcontainer-column .btn {
+  margin-top: 16px;
+  font-size: 16px;
+  padding: 10px 28px;        /* zierlicher Button */
   border-radius: 999px;
 }
 
-
-
-/* RESPONSIVE ANPASSUNGEN */
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
 
 /* Tablet – 2 Spalten */
 @media (max-width: 900px) {
-  .contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column {
-    width: calc(50% - 35px);
+  .contentcontainer[data-container-identifier="container_3_columns"]
+  .contentcontainer-column {
+    width: calc(50% - 30px);
   }
 }
 
-/* Smartphone – 1 Spalte */
+/* Smartphone – 1 Spalte untereinander */
 @media (max-width: 600px) {
-  .contentcontainer[data-container-identifier="container_3_columns"] .contentcontainer-column {
+  .contentcontainer[data-container-identifier="container_3_columns"] {
+    flex-direction: column;   /* erzwingt untereinander */
+    gap: 25px;
+  }
+
+  .contentcontainer[data-container-identifier="container_3_columns"]
+  .contentcontainer-column {
     width: 100%;
   }
 }

@@ -1,7 +1,7 @@
 @import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:news/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
-@import 'EXT:femanager/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:femanager/Configuration/TypoScript/Main/setup.typoscript'
 
 
 config.contentObjectExceptionHandler=0
@@ -61,29 +61,26 @@ lib.maskContentElement {
 plugin.tx_form.settings.yamlConfigurations.100=EXT:projekt25/Configuration/Form/Setup.yaml
 module.tx_form.settings.yamlConfigurations.100=EXT:projekt25/Configuration/Form/Setup.yaml
 
+plugin.tx_femanager.persistence.storagePid = 59
 
+
+#testmn,bn
 
 plugin.tx_femanager {
     settings {
-        storagePid = 59
         new {
-            pid = 59
-        }
-        edit {
-            pid = 59
-        }
-    }
-
-    persistence {
-        storagePid = 59
-    }
-    settings {
-        new {
-            redirectPid = 68
+            redirect {
+                create {
+                    default = 66
+                    de = 66
+                    en = 66
+                }
+            }
         }
     }
-
 }
+
+
 
 
 
