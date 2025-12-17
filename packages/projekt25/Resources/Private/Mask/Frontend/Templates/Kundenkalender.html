@@ -1,21 +1,23 @@
-<!-- optionales Feld -->
+<!-- das Textfeld das ich bei der Mask hinzugefügt habe -->
 {data.tx_mask_text -> f:format.nl2br()}
 
-<!-- Kalender Wrapper für Responsive Layout -->
+<!-- Kalender Wrapper für Layout -->
 <div class="kalender-wrapper">
+    <!--UID für die richtig verknüpfung-->
     <div id="kundenkalender-{data.uid}"
          class="kundenkalender"
          data-uid="{data.uid}">
     </div>
 </div>
 
-<!-- Modal Fenster -->
+<!-- Modal Fenster -> Terminbuchung -->
 <div class="modal fade"
      id="terminModal-{data.uid}"
      tabindex="-1"
      aria-labelledby="terminModalLabel-{data.uid}"
      aria-hidden="true">
 
+    <!--Beginn der Inhalte in der Box -->
     <div class="modal-dialog">
         <div class="modal-content">
 

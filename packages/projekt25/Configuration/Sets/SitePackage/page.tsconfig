@@ -1,5 +1,8 @@
 @import './PageTsConfig/BackendLayouts/'
 
+/*
+Konfiguration des Backends -> Layouts -> KWM1 für News
+*/
 RTE {
     default {
         preset = projekt25
@@ -22,6 +25,7 @@ TCEMAIN {
 tx_news.templateLayouts{
     1=KWM
 }
+
 
 
 

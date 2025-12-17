@@ -11,6 +11,7 @@
 @import "header";
 @import "kalender";
 @import "bilder";
+@import "contact";
 
 //
 // Import needed Bootstrap Package Files
@@ -50,107 +51,7 @@ h4{
 }
 
 
-//Kontakt
-/* Container: 2 Spalten */
-.contentcontainer[data-container-identifier="container_2_columns"] {
-  display: flex;
-  gap: 2rem;
-}
-
-/* Spalten */
-.contentcontainer-column {
-  flex: 1;
-}
-
-/* Mobile: untereinander */
-@media (max-width: 768px) {
-  .contentcontainer[data-container-identifier="container_2_columns"] {
-    flex-direction: column;
-  }
-}
-/* Wrapper für rechte Spalte */
-.contentcontainer-column[data-container-column="right"] {
-  position: relative;
-  border-radius: 25px;
-  overflow: hidden;          /* <<< entscheidend */
-}
-
-/* Google Maps iframe */
-.contentcontainer-column[data-container-column="right"] iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  border: 0;
-  display: block;
-}
-
-/* ÄUSSERSTER Carousel-Rahmen */
-.carousel,
-.carousel-inner,
-.frame-type-carousel,
-.ce-carousel {
-  border-radius: 25px;
-  overflow: hidden; /* DAS ist der Schlüssel */
-}
-
-/* Sicherheit: Slides */
-.carousel-item {
-  border-radius: inherit;
-}
-
-/* Bild-Hintergrund */
-.carousel-backgroundimage-container {
-  border-radius: inherit;
-}
 
 
-/* ===============================
-   LANGUAGE SWITCHER (HEADER)
-================================ */
 
-/* Grundlayout */
-.language-menu {
-  list-style: none;
-  margin: 0;
-  margin-left: 16px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  line-height: 1;
-}
 
-/* Listenelemente */
-.language-menu li {
-  display: flex;
-  align-items: center;
-}
-
-/* Trennstrich DE | EN */
-.language-menu li:not(:last-child)::after {
-  content: "|";
-  margin: 0 8px;
-  color: #000;
-  opacity: 0.6;
-}
-
-/* Links */
-.language-menu a {
-  color: #ff5a3c;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-
-/* Hover */
-.language-menu a:hover {
-  text-decoration: underline;
-}
-
-/* aktive Sprache */
-.language-menu li.active a {
-  font-weight: 700;
-  text-decoration: underline;
-  cursor: default;
-  pointer-events: none; /* verhindert Klick auf aktive Sprache */
-}

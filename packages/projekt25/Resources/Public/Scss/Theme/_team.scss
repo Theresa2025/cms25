@@ -16,7 +16,7 @@
 
 .team-item-image {
   display: flex;
-  justify-content: center; /* Bild zentrieren */
+  justify-content: center;
 }
 
 /* Bild links */
@@ -39,7 +39,7 @@
 
 .team-item-image img {
   width: 100%;
-  max-width: 420px;   /* ← Bildgröße steuern */
+  max-width: 420px;
   height: auto;
   border-radius: 20px;
 }

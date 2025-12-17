@@ -16,15 +16,13 @@ img[src*="csm_Hund_8203c45cc9"]{
 }
 img[src*="csm_ChatGPT_Image_3._Dez._2025__18_54_05_86c74e259c"]{
   width: 100%;
-  max-width: 350px; // z. B. gewünschte Obergrenze
+  max-width: 350px;
   height: auto;
 }
 
 
 
 /*Logo*/
-/* Logo leicht nach unten verschieben */
-/* Bild vergrößern */
 .navbar-brand img {
   height: 100px !important;
   width: auto !important;
@@ -32,11 +30,11 @@ img[src*="csm_ChatGPT_Image_3._Dez._2025__18_54_05_86c74e259c"]{
 }
 
 
-/* Eltern-Container vergrößern */
+/* Nav. vergrößern */
 .navbar-brand {
   display: flex;
   align-items: center;
-  height: 100px !important;     /* MUSS größer sein als das Bild */
+  height: 100px !important;
 }
 
 
@@ -44,9 +42,9 @@ img[src*="csm_ChatGPT_Image_3._Dez._2025__18_54_05_86c74e259c"]{
 /* Einheitliche Größe für alle Social- und Login-Icons */
 .header-icons a img,
 .header-icons a svg {
-  width: 28px;          /* gewünschte Größe */
+  width: 28px;
   height: 28px;
-  object-fit: contain;  /* verhindert Verzerrung */
+  object-fit: contain;
   display: block;
 }
 

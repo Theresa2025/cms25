@@ -1,3 +1,5 @@
+//Pfade für meine Templates, Partial und Layput für die Extentions,
+//damit diese überschrieben werden können
 plugin.tx_news.view.twb5.templateRootPath = EXT:projekt25/Resources/Private/Templates/ExtNews/
 plugin.tx_news.view.twb5.partialRootPath = EXT:projekt25/Resources/Private/Partials/ExtNews/
 plugin.tx_news.view.twb5.layoutRootPath = EXT:projekt25/Resources/Private/Layouts/ExtNews/
