@@ -1,0 +1,33 @@
+/* Text weg */
+.frame-type-felogin_login h3,
+.frame-type-felogin_login p {
+  display: none;
+}
+
+/* schmäler */
+.contentcontainer[data-container-identifier="container_2_columns_left"] {
+  max-width: 900px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+
+/* Registrieren */
+.contentcontainer[data-container-identifier="container_2_columns_left"]
+.contentcontainer-column[data-container-column="right"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+/* Rundungen entfernen*/
+.contentcontainer[data-container-identifier="container_2_columns_left"]
+.contentcontainer-column[data-container-column="right"] {
+  border-radius: 0 !important;
+}
+
+
+
+
+

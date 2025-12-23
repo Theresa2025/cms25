@@ -1,178 +1,131 @@
-
-//Hintergrund
 #page-footer .footer-section-content {
   background-color: #c9ead3;
 }
-
-/* ==========================================================
-   GRUNDLAYOUT – FLEX
-========================================================== */
 #page-footer .section-row {
   display: flex;
-  align-items: stretch;          /* 🔑 alle Spalten gleich hoch */
-  column-gap: 10px;              /* minimaler Abstand */
+  align-items: stretch;
+  gap: 10px;
 }
 
-/* ==========================================================
-   SPALTEN RESET
-========================================================== */
+/* Spaltenverhalten */
 #page-footer .section-column {
+  flex: 1;
+  min-width: 0;
   padding: 0 !important;
   margin: 0;
 }
 
-/* ==========================================================
-   LINKE SPALTE – LOGO
-========================================================== */
+/* Logo */
+/* Logo-Spalte schmäler */
 #page-footer .footer-section-content-column-left {
   flex: 0 0 140px;
   max-width: 140px;
-  height: 100%;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
 }
 
-/* Logo weiter nach unten schieben + zentriert lassen */
-#page-footer .footer-section-content-column-left {
-  display: flex;
-  justify-content: center;      /* horizontal */
-  align-items: flex-start;      /* oben starten */
-}
-
+/* Logo weiter nach unten */
 #page-footer .footer-section-content-column-left img {
-  margin-top: 75px;             /* 👈 weiter nach unten */
+  margin-top: 60px;
   max-width: 120px;
   height: auto;
 }
 
-
-/* Öffnungszeiten – zierlicher */
+/* Öffnungszeiten */
 #page-footer .footer-section-content-column-middle table {
-  font-size: 14px;        /* kleiner */
+  font-size: 13px;
+  table-layout: auto;
 }
 
 #page-footer .footer-section-content-column-middle td {
-  padding: 3px 6px;       /* weniger Abstand */
-  line-height: 1.4;       /* kompakter */
+  padding: 3px 6px;
+  line-height: 1.4;
+
+  color: #000;
 }
 
-
-/* ==========================================================
-   RECHTE SPALTE – KONTAKT + ANFAHRT
-========================================================== */
+/* Kontakt und Anfahrt */
 #page-footer .footer-section-content-column-right {
-  flex: 1.3 1 auto;              /* bewusst mehr Platz */
+  flex: 1.3;
+  word-break: break-word;
 }
 
-/* 2-Spalten-Container zuverlässig erzwingen */
-#page-footer
-.footer-section-content-column-right
-.frame-type-container_2_columns
-.row {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-}
-
-
-
-
-#page-footer a {
-  text-decoration: underline;
-}
-
-/* Footer von globalen Column-Radien AUSNEHMEN */
+/* rundung - Kontakt*/
 #page-footer .section-column,
 #page-footer .contentcontainer-column,
 #page-footer .frame,
 #page-footer .frame-inner,
-#page-footer .frame-header,
-#page-footer .element-header,
-#page-footer .element-header span {
+#page-footer .frame-header {
   border-radius: 0 !important;
 }
 
-#section footer-section footer-section-meta{
-  background-color: #c9ead3 !important; ;
-}
-
-/* ================================
-   FOOTER META (AGB / IMPRESSUM)
-================================ */
-
-.footer-section-meta {
-  background-color: #c9ead3 !important;   /* gleiches Grün wie Footer */
+/* AGB und Impressum */
+.footer-section.footer-section-meta {
+  background-color: #c9ead3;
   padding: 20px 0;
 }
 
-/* Liste zurücksetzen & zentrieren */
 .footer-section-meta .footer-legal {
-  list-style: none;            /* keine Aufzählungszeichen */
+  list-style: none;
   margin: 0;
   padding: 0;
 
   display: flex;
-  justify-content: center;     /* mittig */
-  gap: 24px;                   /* Abstand zwischen Links */
+  justify-content: center;
+  gap: 24px;
 }
 
-/* Links */
-.footer-section-meta .footer-link {
-  color: #0f7a75;              /* Petrol */
-  text-decoration: underline;
-  font-size: 15px;
-}
 
-/* Hover (optional, aber schön) */
-.footer-section-meta .footer-link:hover {
-  opacity: 0.8;
-}
 
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
+/* Responsive – TABLET (≤ 900px) */
+
 @media (max-width: 900px) {
   #page-footer .section-row {
-    flex-direction: column;
-    row-gap: 20px;
+    flex-wrap: wrap;
+    gap: 24px;
   }
-
   #page-footer .footer-section-content-column-left {
-    flex: 0 0 auto;
+    flex: 0 0 100%;
     max-width: 100%;
     justify-content: flex-start;
   }
+  #page-footer .footer-section-content-column-middle,
+  #page-footer .footer-section-content-column-right {
+    flex: 1;
+  }
+  #page-footer .footer-section-content-column-right .frame-type-container_2_columns
+  .row {
+    grid-template-columns: 1fr;
+  }
 }
 
+/* Responsive – MOBILE (≤ 600px) */
 @media (max-width: 600px) {
   #page-footer .section-row {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 25px;
     text-align: center;
+    gap: 25px;
   }
 
   #page-footer .footer-section-content-column-left,
   #page-footer .footer-section-content-column-middle,
   #page-footer .footer-section-content-column-right {
-    max-width: 100%;
     width: 100%;
     align-items: center;
+    text-align: center;
   }
-
-  /* Logo mittig & nicht zu weit unten */
+  #page-footer .footer-section-content-column-left {
+    justify-content: center;
+  }
   #page-footer .footer-section-content-column-left img {
     margin-top: 20px;
   }
-
-  /* Tabellen zentrieren */
   #page-footer .footer-section-content-column-middle table {
     margin: 0 auto;
   }
-
-  /* Kontakt-Links mittig */
   #page-footer a {
     display: inline-block;
   }

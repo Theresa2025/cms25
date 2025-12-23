@@ -49,15 +49,28 @@ img[src*="csm_ChatGPT_Image_3._Dez._2025__18_54_05_86c74e259c"]{
 }
 
 .header-icons img[src*="LoginIcon"] {
-  width: 40px;   // gewünschte Größe
+  width: 40px;
   height: auto;
 }
 
 .header-icons img[src*="Instagram"] {
-  width: 32px;   // gewünschte Größe
+  width: 32px;
   height: auto;
 }
 
+
+
+/* News-Bilder */
+.news-single .thumbnail img {
+  border-radius: 20px;
+}
+
+.news-list-view .card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
 
 
 

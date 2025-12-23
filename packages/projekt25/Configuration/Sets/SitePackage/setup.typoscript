@@ -58,20 +58,9 @@ plugin.tx_femanager.persistence.storagePid = 59
 
 
 
-//Registrierung -> noch nicht funktionsfähig
-plugin.tx_femanager {
-    settings {
-        new {
-            redirect {
-                create {
-                    default = 66
-                    de = 66
-                    en = 66
-                }
-            }
-        }
-    }
-}
+//hatte eine Fehler meldung in der Consolue- jetzt nicht mehr
+plugin.tx_news.settings.cssFile >
+
 
 
 

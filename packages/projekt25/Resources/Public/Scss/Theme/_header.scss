@@ -27,7 +27,6 @@
 }
 
 //Sprache
-/* Grundlayout */
 .language-menu {
   list-style: none;
   margin: 0;
@@ -39,13 +38,12 @@
   line-height: 1;
 }
 
-/* Listenelemente */
 .language-menu li {
   display: flex;
   align-items: center;
 }
 
-/* Trennstrich DE | EN */
+/* Trennstrich */
 .language-menu li:not(:last-child)::after {
   content: "|";
   margin: 0 8px;

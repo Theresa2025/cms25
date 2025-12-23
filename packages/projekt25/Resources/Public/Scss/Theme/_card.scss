@@ -1,4 +1,4 @@
-/* CARD HEADER */
+/*Leistungen*/
 
 .card-header-row {
   display: flex;
@@ -9,9 +9,7 @@
   gap: 1rem; // Abstand bei Umbruch
 }
 
-/* ================================
-   ICON
-================================ */
+/* Bild */
 
 .card-icon-wrapper img {
   width: auto;
@@ -19,9 +17,7 @@
   max-height: 60px; // Desktop Standard
 }
 
-/* ================================
-   CARD CONTAINER
-================================ */
+/* card container */
 
 .card-group-element-item {
   background-color: #C9EAD3;
@@ -36,9 +32,7 @@
   box-shadow: none;
 }
 
-/* ================================
-   TABLET (≤ 992px)
-================================ */
+/* TABLET (≤ 992px) */
 
 @media (max-width: 992px) {
   .card-group-element-item {
@@ -50,33 +44,20 @@
   }
 }
 
-/* ================================
-   MOBILE (≤ 768px)
-================================ */
-
+/* MOBILE (≤ 768px) */
 @media (max-width: 768px) {
   .card-header-row {
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .card-icon-wrapper img {
-    max-height: 42px;
+    max-height: 40px;
+    flex-shrink: 0;
   }
 }
 
-/* ================================
-   SMALL MOBILE (≤ 480px)
-================================ */
 
-@media (max-width: 480px) {
-  .card-group-element-item {
-    padding: 1.5rem;
-    border-radius: 20px;
-  }
 
-  .card-icon-wrapper img {
-    max-height: 36px;
-  }
-}
+
