@@ -58,7 +58,7 @@ plugin.tx_femanager.persistence.storagePid = 59
 
 
 
-//hatte eine Fehler meldung in der Consolue- jetzt nicht mehr
+//hatte eine Fehlermeldung in der Console- jetzt nicht mehr
 plugin.tx_news.settings.cssFile >
 
 

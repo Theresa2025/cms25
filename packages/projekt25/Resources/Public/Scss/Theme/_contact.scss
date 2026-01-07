@@ -1,5 +1,4 @@
-//Kontakt
-/*  2 Spalten */
+/* Kontaktseite:*/
 .contentcontainer[data-container-identifier="container_2_columns"] {
   display: flex;
   gap: 2rem;
@@ -10,8 +9,8 @@
   flex: 1;
 }
 
-/* Mobile: untereinander */
-@media (max-width: 768px) {
+/* Mobile Kontakt  */
+@media (max-width: 600px) {
   .contentcontainer[data-container-identifier="container_2_columns"] {
     flex-direction: column;
   }
@@ -38,7 +37,7 @@
 .frame-type-carousel,
 .ce-carousel {
   border-radius: 25px;
-  overflow: hidden; /* DAS ist der Schlüssel */
+  overflow: hidden;
 }
 
 /*  Slides */

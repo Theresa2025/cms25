@@ -15,7 +15,6 @@
   margin: 0;
 }
 
-/* Logo */
 /* Logo-Spalte schmäler */
 #page-footer .footer-section-content-column-left {
   flex: 0 0 140px;
@@ -79,8 +78,7 @@
 
 
 
-/* Responsive – TABLET (≤ 900px) */
-
+/* Tablet */
 @media (max-width: 900px) {
   #page-footer .section-row {
     flex-wrap: wrap;
@@ -101,7 +99,7 @@
   }
 }
 
-/* Responsive – MOBILE (≤ 600px) */
+/* Moblie */
 @media (max-width: 600px) {
   #page-footer .section-row {
     flex-direction: column;

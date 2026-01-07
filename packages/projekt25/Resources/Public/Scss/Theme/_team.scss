@@ -100,3 +100,40 @@ img[src*="csm_Team1_520937ed15"]{
 }
 
 
+//Mobile
+@media (max-width: 600px) {
+
+  .team-list {
+    gap: 50px;
+    padding: 30px 15px;
+  }
+  .team-item {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+  .team-left .team-item-image,
+  .team-right .team-item-image {
+    order: 1;
+  }
+  .team-left .team-item-content,
+  .team-right .team-item-content {
+    order: 2;
+    padding: 0;
+    text-align: center;
+  }
+  .team-item-image img {
+    max-width: 100%;
+  }
+  .team-item-name {
+    font-size: 26px;
+  }
+  .team-item-role {
+    font-size: 18px;
+  }
+  .team-toggle-btn {
+    margin: 20px auto 0;
+  }
+
+}
+
+

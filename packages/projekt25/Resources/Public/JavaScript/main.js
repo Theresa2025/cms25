@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Main JS wird geladen");
 
-    // ------------------------------------------------------
-    // PLUS / MINUS BUTTONS
-    // ------------------------------------------------------
+    // Plus, Minus Button für die Teams
     const buttons = document.querySelectorAll('.toggle-info-btn');
     buttons.forEach(btn => {
         btn.addEventListener('click', function () {
@@ -18,9 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ------------------------------------------------------
-    // KALENDER INITIALISIEREN
-    // ------------------------------------------------------
+
+    // Kalender für den Kundenbereich
     console.log("Kalender-Initialisierung startet…");
 
     const calendarEls = document.querySelectorAll(".kundenkalender");
@@ -30,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
+    //mit UID damit Kalender eindeutig
     calendarEls.forEach(function (el) {
 
         const uid = el.getAttribute("data-uid");
@@ -37,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const modalEl = document.getElementById(`terminModal-${uid}`);
         const modalForm = document.getElementById(`terminForm-${uid}`);
 
+        //Daten:
         const datumInput = document.getElementById(`terminDatum-${uid}`);
         const nameInput = document.getElementById(`terminName-${uid}`);
         const leistungInput = document.getElementById(`terminLeistung-${uid}`);
@@ -44,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const modal = new bootstrap.Modal(modalEl);
 
+        // Monatsansicht, Tage sind klickbar, sprache Deutsch, Wochenstart 1-> Montag
         const calendar = new FullCalendar.Calendar(el, {
             initialView: "dayGridMonth",
             selectable: true,
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             firstDay: 1,
             dateClick: function (info) {
 
+                //Montag - Freitag
                 const wochentag = info.date.getDay();
 
                 if (wochentag === 0 || wochentag === 6) {
@@ -58,21 +59,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     return;
                 }
 
+                //Damit Datum gleich ins Formular übertragen wird
                 datumInput.value = info.dateStr;
+
+                //Formular zurücksetzten
                 nameInput.value = "";
                 leistungInput.value = "";
                 kommentarInput.value = "";
 
+                //nach klick auf Datum -> Formular wird geöffnet
                 modal.show();
             }
         });
 
         calendar.render();
 
-        // FORMULAR SENDEN → MAIL ÖFFNEN
+        // Formular + Senden
+
+        // Formular wird nicht automatisch versendet -> kein Seitenreload
         modalForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
+            //UID für das richtig Formular und Daten lesen
             const datum = datumInput.value;
             const name = nameInput.value;
             const telefon = document.getElementById(`terminTelefon-${uid}`).value;
@@ -95,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `%0D%0ADatum: ${encodeURIComponent(datum)}` +
                 `%0D%0AKommentar: ${encodeURIComponent(kommentar)}`;
 
+            //Standard Mailprogramm wird geöffnet
             window.location.href = mailto;
 
             modal.hide();
